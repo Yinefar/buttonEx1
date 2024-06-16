@@ -1,0 +1,58 @@
+:root {
+    --color-black: rgba(6, 18, 59, 0.813);
+    --color-white: hsl(100, 82%, 82%);
+    --fs-medium: clamp(1.5rem, 0.6966rem + 1.2945vw, 3rem);
+    --border-radius: 0.75rem;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+
+  }
+  body {
+    min-height: 100dvh;
+    width: 100%;
+    display: flex; /*ajustar la ubicación*/
+    align-items: center; /*los botones deben ir al centro vertical*/
+    justify-content: center; /*los botones centro horizontal*/
+    background-color: rgb(252, 253, 186);
+  }
+  .button-container {
+    display: flex;
+    gap: 100px;  /*espacio entre botones por eso  'gap' */
+
+  }
+  .animated-btn {
+    padding: 0.75rem 1.25rem;
+    text-transform: uppercase; /*para transformar el texto en mayusculas*/
+    line-height: 1;
+    letter-spacing: 1px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    
+
+    & .wrapper {
+      font-size: var(--fs-medium);
+      height: var(--fs-medium);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
+  
+  .animated-btn:hover {
+    background-color:chocolate; /*al acercar el puntero cambiará de color*/
+  }
+  .split-text {
+    display: inline-flex;
+
+  }
+  
+  .split-word {
+    display: inline-flex;
+  }
